@@ -1,0 +1,19 @@
+{
+  "name": "rc-sender-js",
+  "version": "1.0.0",
+  "description": "Simple RC Sender package based on my golang tool",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Cineplays",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
