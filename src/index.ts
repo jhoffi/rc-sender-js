@@ -1,4 +1,4 @@
-import { exec, ExecException } from 'child_process'
+import { exec, execSync } from 'child_process'
 
 export class RCSender {
     _protocol: number;
@@ -12,6 +12,8 @@ export class RCSender {
         this._pin = pin;
         this._pulseLength = 0;
         if (pin < 1) pin = 1;
+
+        execSync(`chmod +rwx ${__dirname}/rc-sender-linux-arm32`);
     }
 
     /**
@@ -61,7 +63,7 @@ export class RCSender {
      */
     async send(code: number, length: number): Promise<boolean> {
         return new Promise((promise) => {
-            exec(`./rc-sender-linux-arm32 ${this._pin} ${code} ${length} ${this._protocol} ${this._pulseLength} ${this._repeatTransmit}`, (error, stdout, stderr) => {
+            exec(`${__dirname}/rc-sender-linux-arm32 ${this._pin} ${code} ${length} ${this._protocol} ${this._pulseLength} ${this._repeatTransmit}`, (error, stdout, stderr) => {
                 if (error != null) {
                     console.log(`RC-SENDER | Error sending code: ${stderr}`)
                     promise(true);
