@@ -61,7 +61,7 @@ export class RCSender {
      */
     async send(code: number, length: number): Promise<boolean> {
         return new Promise((promise) => {
-            exec(`./rc-sender-go/rc-sender-linux-arm32 ${this._pin} ${code} ${length} ${this._protocol} ${this._pulseLength} ${this._repeatTransmit}`, (error, stdout, stderr) => {
+            exec(`./rc-sender-linux-arm32 ${this._pin} ${code} ${length} ${this._protocol} ${this._pulseLength} ${this._repeatTransmit}`, (error, stdout, stderr) => {
                 if (error != null) {
                     console.log(`RC-SENDER | Error sending code: ${stderr}`)
                     promise(true);
