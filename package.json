@@ -1,6 +1,6 @@
 {
   "name": "rc-sender-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple RC Sender package based on my golang tool",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
