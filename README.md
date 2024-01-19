@@ -1,6 +1,6 @@
 # RC-Sender-JS
 
-This is just a little package to control 433mhz devices on Raspberry Pi. It uses [golang](https://github.com/CinePlays/rc-sender-go) because of some performance issues. You don't need any external library like wiring-pi or pigpio. It's based on the RC-Switch repository for Arduino and ESP8266.
+This is just a little package to control 433mhz devices on Raspberry Pi. It uses [golang](https://github.com/CinePlays/rc-sender-go) because of some performance issues. You don't need any external library like wiring-pi or pigpio. It's based on the [RC-Switch repository](https://github.com/sui77/rc-switch) for Arduino and ESP8266.
 
 For rootless use (/dev/gpiomem) you need to add your user to the GPIO group.
 

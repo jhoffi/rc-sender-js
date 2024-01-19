@@ -1,17 +1,17 @@
 {
   "name": "rc-sender-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple RC Sender package based on my golang tool",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CinePlays/rc-sender-js.git"
+    "url": "https://github.com/jhoffi/rc-sender-js.git"
   },
   "scripts": {
     "build": "tsc"
   },
-  "author": "Cineplays",
+  "author": "jhoffi",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^15.6.1",
